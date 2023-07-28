@@ -1,8 +1,8 @@
 // components/App.js
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import DisplayAlignments from "./Pages/DisplayAlignments";
 import Homepage from "./Pages/Homepage";
+import NavBar from "./components/NavBar";
 
 export default function App() {
   const api = "https://www.dnd5eapi.co/api/alignments/";
@@ -20,6 +20,7 @@ export default function App() {
 
   return (
     <div>
+      <NavBar />
       <Routes>
         <Route
           path="/"

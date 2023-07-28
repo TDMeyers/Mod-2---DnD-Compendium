@@ -9,7 +9,7 @@ const gameSlice = createSlice({
     name: 'gamedata',
     initialState,
     reducers: {
-
+        
     }
 })
 
