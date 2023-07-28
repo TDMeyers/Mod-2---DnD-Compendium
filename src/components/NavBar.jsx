@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 
-export default function NavBar() {
+export default function Navbar() {
     return(
         <div className="nav">
-            {/* <Link to="wondrous-crostata-157ac4.netlify.app/">
+            <Link to="/">
                 <div>Home</div>
-            </Link> */}
+            </Link>
+            <Link to="/CharacterData">
+                <div>Character Data</div>
+            </Link>
         </div>
     )
 }
