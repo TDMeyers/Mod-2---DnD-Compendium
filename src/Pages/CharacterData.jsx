@@ -1,4 +1,4 @@
-import DisplayAlignments from "../components/DisplayAlignments";
+import DisplayAlignments from "../Components/DisplayAlignments";
 
 export default function Alignments() {
   return (
