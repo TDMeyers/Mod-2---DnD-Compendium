@@ -1,9 +1,9 @@
-import DisplayAlignments from "../Components/DisplayAlignments"
+import DisplayAlignments from "../components/DisplayAlignments";
 
 export default function Alignments() {
-    return(
-        <div>
-            <DisplayAlignments />
-        </div>
-    )
+  return (
+    <div>
+      <DisplayAlignments />
+    </div>
+  );
 }
