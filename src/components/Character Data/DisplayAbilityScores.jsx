@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAbilityScoresData, fetchAbilityScoresDetails } from "../../Store/Thunks/Character Data/fetchAbilityScoresData";
-import { setShowPopup, setPopupContent } from "../../Store/Slices/Site Functions/popupSlice";
+import { setShowPopup, setPopupContent, setHoveredSkill } from "../../Store/Slices/Site Functions/popupSlice";
 
 const DisplayAbilityScores = () => {
     const dispatch = useDispatch();
@@ -9,10 +10,27 @@ const DisplayAbilityScores = () => {
         (state) => state.abilityScores
     );
 
-    const handleMouseOver = (skill) => {
-        // When hovering over a skill button, update the popup content and show the popup
-        dispatch(setPopupContent({ title: skill.name, description: skill.desc[0] }));
-        dispatch(setShowPopup(true));
+    const handleMouseOver = async (skill) => {
+        try {
+            // Fetch the skill details using the URL provided in the skill object
+            const response = await axios.get(`https://www.dnd5eapi.co${skill.url}`);
+
+
+            // Get the detailed description from the API response
+            const detailedDescription = response.data.desc && response.data.desc[0]
+                ? response.data.desc[0]
+                : "Detailed description not available";
+
+            // When hovering over a skill button, update the popup content with detailed description
+            setPopupContent({
+                title: skill.name,
+                description: detailedDescription,
+            });
+            setShowPopup(true);
+            setHoveredSkill(skill);
+        } catch (error) {
+            console.error("Error fetching skill details:", error);
+        }
     };
 
     const handleMouseOut = () => {

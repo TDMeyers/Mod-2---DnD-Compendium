@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     showPopup: false,
+    hoveredSkill: null,
     popupContent: {
         title: "",
         description: "",
@@ -18,9 +19,12 @@ const popupSlice = createSlice({
         setPopupContent(state, action) {
             state.popupContent = action.payload;
         },
+        setHoveredSkill(state, action) {
+            state.popupContent = action.payload;
+        },
     },
 });
 
-export const { setShowPopup, setPopupContent } = popupSlice.actions;
+export const { setShowPopup, setPopupContent, setHoveredSkill } = popupSlice.actions;
 
 export default popupSlice.reducer;
