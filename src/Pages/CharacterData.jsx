@@ -1,6 +1,6 @@
-import DisplayAlignments from "../components/DisplayAlignments";
+import DisplayAlignments from "../components/Character Data/DisplayAlignments";
 
-export default function Alignments() {
+export default function CharacterData() {
   return (
     <div>
       <DisplayAlignments />

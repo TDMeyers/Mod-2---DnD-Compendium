@@ -1,6 +1,6 @@
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
-import alignmentsReducer from "./Slices/alignmentsSlice";
-import gameMechanicsReducer from "./Slices/gameMechanicsSlice";
+import alignmentsReducer from "./Slices/Character Data/alignmentsSlice";
+import gameMechanicsReducer from "./Slices/Game Mechanics/gameMechanicsSlice";
 
 const store = configureStore({
   reducer: {

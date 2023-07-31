@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   fetchAlignmentsData,
   fetchAlignmentDetails,
-} from "../Store/Thunks/fetchAlignmentsData";
+} from "../../Store/Thunks/Character Data/fetchAlignmentsData";
 
 const DisplayAlignments = () => {
   const dispatch = useDispatch();

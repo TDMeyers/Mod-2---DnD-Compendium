@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchAlignmentsData } from "../Thunks/fetchAlignmentsData";
-import { fetchAlignmentDetails } from "../Thunks/fetchAlignmentsData";
+import { fetchAlignmentsData } from "../../Thunks/Character Data/fetchAlignmentsData";
+import { fetchAlignmentDetails } from "../../Thunks/Character Data/fetchAlignmentsData";
 
 const alignmentsSlice = createSlice({
   name: "alignments",

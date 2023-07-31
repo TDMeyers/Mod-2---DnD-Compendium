@@ -1,5 +1,3 @@
-// src/store/thunks/fetchAlignmentsData.js
-
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 // Define the async thunk with an additional 'alignment' parameter
