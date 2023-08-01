@@ -1,43 +1,43 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchSpellsData } from "../../Thunks/Spells/fetchSpellsData";
-import { fetchSpellData } from "../../Thunks/Spells/fetchSpellsData";
+import { fetchTraitsData } from "../../Thunks/Character Data/fetchTraitsData";
+import { fetchTraitData } from "../../Thunks/Character Data/fetchTraitsData";
 
-const spellsSlice = createSlice({
-    name: "spells",
+const traitsSlice = createSlice({
+    name: "traits",
     initialState: {
         data: [],
-        selectedSpell: null,
+        selectedTrait: null,
         loading: false,
         error: null,
     },
     reducers: {},
     extraReducers: (builder) => {
         builder
-            .addCase(fetchSpellsData.pending, (state) => {
+            .addCase(fetchTraitsData.pending, (state) => {
                 state.loading = true;
                 state.error = null;
             })
-            .addCase(fetchSpellsData.fulfilled, (state, action) => {
+            .addCase(fetchTraitsData.fulfilled, (state, action) => {
                 state.loading = false;
                 state.data = action.payload;
             })
-            .addCase(fetchSpellsData.rejected, (state, action) => {
+            .addCase(fetchTraitsData.rejected, (state, action) => {
                 state.loading = false;
                 state.error = action.error.message;
             })
-            .addCase(fetchSpellData.pending, (state) => {
+            .addCase(fetchTraitData.pending, (state) => {
                 state.loading = true;
                 state.error = null;
             })
-            .addCase(fetchSpellData.fulfilled, (state, action) => {
+            .addCase(fetchTraitData.fulfilled, (state, action) => {
                 state.loading = false;
-                state.selectedSpell = action.payload;
+                state.selectedTrait = action.payload;
             })
-            .addCase(fetchSpellData.rejected, (state, action) => {
+            .addCase(fetchTraitData.rejected, (state, action) => {
                 state.loading = false;
                 state.error = action.error.message;
             });
     },
 });
 
-export default spellsSlice.reducer;
+export default traitsSlice.reducer;
