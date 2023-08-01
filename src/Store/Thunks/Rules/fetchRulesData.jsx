@@ -16,6 +16,6 @@ export const fetchRuleSectionData = createAsyncThunk(
         const api = `https://www.dnd5eapi.co${sectionIndex}`;
         const response = await fetch(api);
         const data = await response.json();
-        return data;
+        return data.subsections;
     }
 );

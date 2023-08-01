@@ -4,16 +4,13 @@ import { fetchRuleData, fetchRuleSectionData } from "../../Store/Thunks/Rules/fe
 
 const DisplayRules = () => {
     const dispatch = useDispatch();
-    const { selectedRule, selectedRuleSection, loading, error } = useSelector(
-        (state) => state.rules
-    );
+    const { selectedRule, selectedRuleSection, loading, error } = useSelector((state) => state.rules);
 
     useEffect(() => {
-        dispatch(fetchRuleData("/api/rules"));
-    }, [dispatch])
+        dispatch(fetchRuleData('/api/rules'));
+    }, [dispatch]);
 
     const handleFetchWithRuleSection = (sectionIndex) => {
-        // Dispatch an action to fetch rule section details with the given sectionIndex
         dispatch(fetchRuleSectionData(sectionIndex));
     };
 
@@ -27,10 +24,7 @@ const DisplayRules = () => {
                 <>
                     {selectedRule && selectedRule.length > 0 ? (
                         selectedRule.map((rule) => (
-                            <button
-                                key={rule.index}
-                                onClick={() => handleFetchWithRuleSection(rule.url)}
-                            >
+                            <button key={rule.index} onClick={() => handleFetchWithRuleSection(rule.url)}>
                                 {rule.name}
                             </button>
                         ))
@@ -40,9 +34,14 @@ const DisplayRules = () => {
 
                     {selectedRuleSection && (
                         <>
-                            <h2>{selectedRuleSection.name}</h2>
-                            <p>Abbreviation: {selectedRuleSection.abbreviation}</p>
-                            <p>Description: {selectedRuleSection.description}</p>
+                            {selectedRuleSection.map((nextRule) => (
+                                <li><button
+                                    key={nextRule.index}
+                                    onClick={() => handleFetchWithRuleSection(nextRule.url)}
+                                >
+                                    {nextRule.name}
+                                </button></li>
+                            ))}
                         </>
                     )}
                 </>

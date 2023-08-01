@@ -6,6 +6,9 @@ export default function Navbar() {
             <Link to="/">
                 <div>Home</div>
             </Link>
+            <Link to="/CharacterData">
+                <div>CharacterData</div>
+            </Link>
             <Link to="/Class">
                 <div>Class</div>
             </Link>
