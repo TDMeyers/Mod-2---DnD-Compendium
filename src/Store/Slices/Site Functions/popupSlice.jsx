@@ -20,7 +20,7 @@ const popupSlice = createSlice({
             state.popupContent = action.payload;
         },
         setHoveredSkill(state, action) {
-            state.popupContent = action.payload;
+            state.hoveredSkill = action.payload;
         },
     },
 });

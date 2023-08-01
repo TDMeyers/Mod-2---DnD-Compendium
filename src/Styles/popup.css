@@ -1,0 +1,23 @@
+/* Example CSS styles for the popup */
+.hover-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: none; /* Hidden by default */
+}
+
+.hover-container.visible {
+  display: block; /* Show the popup when it's visible */
+}
+
+.popup-content {
+  /* Customize the popup content styles as needed */
+}
+
+.skill-item {
+  /* Customize the styles of the elements that trigger the popup on hover */
+}

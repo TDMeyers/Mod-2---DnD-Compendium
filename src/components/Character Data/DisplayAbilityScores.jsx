@@ -3,18 +3,20 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAbilityScoresData, fetchAbilityScoresDetails } from "../../Store/Thunks/Character Data/fetchAbilityScoresData";
 import { setShowPopup, setPopupContent, setHoveredSkill } from "../../Store/Slices/Site Functions/popupSlice";
+import "../../Styles/popup.css"
 
 const DisplayAbilityScores = () => {
     const dispatch = useDispatch();
     const { data, selectedAbilityScores, loading, error } = useSelector(
         (state) => state.abilityScores
     );
+    const showPopup = useSelector((state) => state.popup.showPopup);
+    const popupContent = useSelector((state) => state.popup.popupContent);
 
     const handleMouseOver = async (skill) => {
         try {
             // Fetch the skill details using the URL provided in the skill object
             const response = await axios.get(`https://www.dnd5eapi.co${skill.url}`);
-
 
             // Get the detailed description from the API response
             const detailedDescription = response.data.desc && response.data.desc[0]
@@ -22,12 +24,12 @@ const DisplayAbilityScores = () => {
                 : "Detailed description not available";
 
             // When hovering over a skill button, update the popup content with detailed description
-            setPopupContent({
+            dispatch(setPopupContent({
                 title: skill.name,
                 description: detailedDescription,
-            });
-            setShowPopup(true);
-            setHoveredSkill(skill);
+            }));
+            dispatch(setShowPopup(true));
+            dispatch(setHoveredSkill(skill));
         } catch (error) {
             console.error("Error fetching skill details:", error);
         }
@@ -46,7 +48,8 @@ const DisplayAbilityScores = () => {
         dispatch(fetchAbilityScoresDetails(abilityScoreUrl));
     };
 
-    const showPopup = useSelector((state) => state.popup.showPopup);
+    console.log("showPopup:", showPopup);
+    console.log("popupContent:", popupContent);
 
     return (
         <div>
@@ -91,9 +94,11 @@ const DisplayAbilityScores = () => {
 
                     {/* Render the popup if showPopup is true */}
                     {showPopup && (
-                        <div>
-                            <h2>{popupContent.title}</h2>
-                            <p>{popupContent.description}</p>
+                        <div className="hover-container" id="popup-container">
+                            <div className="popup-content" id="popup-content">
+                                <h3 id="popup-title">{popupContent.title}</h3>
+                                <p id="popup-description">{popupContent.description}</p>
+                            </div>
                         </div>
                     )}
                 </>
