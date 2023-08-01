@@ -15,7 +15,8 @@
 }
 
 .popup-content {
-  /* Customize the popup content styles as needed */
+  border: 1px solid red;
+  color: black;
 }
 
 .skill-item {

@@ -93,14 +93,12 @@ const DisplayAbilityScores = () => {
                     )}
 
                     {/* Render the popup if showPopup is true */}
-                    {showPopup && (
-                        <div className="hover-container" id="popup-container">
-                            <div className="popup-content" id="popup-content">
-                                <h3 id="popup-title">{popupContent.title}</h3>
-                                <p id="popup-description">{popupContent.description}</p>
-                            </div>
+                    <div className={`hover-container ${showPopup ? "visible" : ""}`} id="popup-container">
+                        <div className="popup-content" id="popup-content">
+                            <h3 id="popup-title">{popupContent.title}</h3>
+                            <p id="popup-description">{popupContent.description}</p>
                         </div>
-                    )}
+                    </div>
                 </>
             )}
         </div>
