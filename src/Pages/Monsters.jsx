@@ -1,5 +1,5 @@
 export default function Monsters() {
-    return(
+    return (
         <div>
             Monster Stuff to go here
         </div>

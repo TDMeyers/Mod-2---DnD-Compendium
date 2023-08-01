@@ -1,11 +1,16 @@
 // components/App.js
 import { Routes, Route } from "react-router-dom";
-import Homepage from "./Pages/Homepage";
-import GameMechanics from "./Pages/GameMechanics"
-import CharacterData from "./Pages/CharacterData";
-import Monsters from "./Pages/Monsters"
-import Spells from "./Pages/Spells"
 import Navbar from "./components/NavBar";
+import Homepage from "./Pages/Homepage";
+import CharacterData from "./Pages/CharacterData";
+import Class from "./Pages/Class";
+import Equipment from "./Pages/Equipment";
+import GameMechanics from "./Pages/GameMechanics";
+import Monsters from "./Pages/Monsters";
+import Races from "./Pages/Races";
+import Rules from "./Pages/Rules";
+import Spells from "./Pages/Spells";
+
 
 export default function App() {
   return (
@@ -17,16 +22,32 @@ export default function App() {
           element={<Homepage />}
         />
         <Route
-          path="/GameMechanics"
-          element={<GameMechanics />}
-        />
-        <Route
           path="/CharacterData"
           element={<CharacterData />}
         />
         <Route
+          path="/Class"
+          element={<Class />}
+        />
+        <Route
+          path="/Equipment"
+          element={<Equipment />}
+        />
+        <Route
+          path="/GameMechanics"
+          element={<GameMechanics />}
+        />
+        <Route
           path="/Monsters"
           element={<Monsters />}
+        />
+        <Route
+          path="/Races"
+          element={<Races />}
+        />
+        <Route
+          path="/Rules"
+          element={<Rules />}
         />
         <Route
           path="/Spells"
