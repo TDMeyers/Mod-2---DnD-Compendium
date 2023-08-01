@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchSkillsData } from "../../Thunks/Character Data/fetchRacesData";
+import { fetchSkillsData } from "../../Thunks/Races/fetchRacesData";
 
 const skillsSlice = createSlice({
     name: "skills",

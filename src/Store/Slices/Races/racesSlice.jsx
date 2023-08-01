@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchRacesData } from "../../Thunks/Character Data/fetchRacesData";
-import { fetchRaceSubracesData } from "../../Thunks/Character Data/fetchRacesData";
-import { fetchRaceProficienciesData } from "../../Thunks/Character Data/fetchRacesData";
-import { fetchRaceTraitsData } from "../../Thunks/Character Data/fetchRacesData";
+import { fetchRacesData } from "../../Thunks/Races/fetchRacesData";
+import { fetchRaceSubracesData } from "../../Thunks/Races/fetchRacesData";
+import { fetchRaceProficienciesData } from "../../Thunks/Races/fetchRacesData";
+import { fetchRaceTraitsData } from "../../Thunks/Races/fetchRacesData";
 
 const racesSlice = createSlice({
     name: "races",

@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchEquipmentData } from "../../Thunks/Character Data/fetchEquipmentData";
-import { fetchEquipmentCategoriesData } from "../../Thunks/Character Data/fetchEquipmentData";
-import { fetchMagicItemsData } from "../../Thunks/Character Data/fetchEquipmentData";
-import { fetchWeaponPropertiesData } from "../../Thunks/Character Data/fetchEquipmentData";
+import { fetchEquipmentData } from "../../Thunks/Equipment/fetchEquipmentData";
+import { fetchEquipmentCategoriesData } from "../../Thunks/Equipment/fetchEquipmentData";
+import { fetchMagicItemsData } from "../../Thunks/Equipment/fetchEquipmentData";
+import { fetchWeaponPropertiesData } from "../../Thunks/Equipment/fetchEquipmentData";
 
 const equipmentSlice = createSlice({
     name: "equipment",

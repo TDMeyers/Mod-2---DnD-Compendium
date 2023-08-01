@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchClassesData } from "../../Thunks/Character Data/fetchClassesData";
-import { fetchClassSpellcasting } from "../../Thunks/Character Data/fetchClassesData";
-import { fetchClassMultiClassing } from "../../Thunks/Character Data/fetchClassesData";
+import { fetchClassesData } from "../../Thunks/Class/fetchClassesData";
+import { fetchClassSpellcasting } from "../../Thunks/Class/fetchClassesData";
+import { fetchClassMultiClassing } from "../../Thunks/Class/fetchClassesData";
 
 const classesSlice = createSlice({
     name: "classes",
