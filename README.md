@@ -1,4 +1,4 @@
-# A D&D Compendium - deployed and hosted at: https://wondrous-crostata-157ac4.netlify.app/
+# A D&D Compendium - deployed and hosted at: https://wondrous-crostata-157ac4.netlify.app/ [![Netlify Status](https://api.netlify.com/api/v1/badges/d1eeb56e-f20d-472b-991a-856539f74b86/deploy-status)](https://app.netlify.com/sites/wondrous-crostata-157ac4/deploys)
 ------------------------------------------------------------------
 - Project 2 for Activate Work and Per Scholas
 ------------------------------------------------------------------
