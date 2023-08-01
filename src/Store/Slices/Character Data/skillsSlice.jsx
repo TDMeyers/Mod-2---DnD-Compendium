@@ -1,10 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchSkillsData } from "../../Thunks/Races/fetchRacesData";
+import { fetchSkillsData, fetchSkillDetails } from "../../Thunks/Character Data/fetchSkillsData";
 
 const skillsSlice = createSlice({
     name: "skills",
     initialState: {
         data: [],
+        selectedSkill: null,
         loading: false,
         error: null,
     },
@@ -20,6 +21,18 @@ const skillsSlice = createSlice({
                 state.data = action.payload;
             })
             .addCase(fetchSkillsData.rejected, (state, action) => {
+                state.loading = false;
+                state.error = action.error.message;
+            })
+            .addCase(fetchSkillDetails.pending, (state) => {
+                state.loading = true;
+                state.error = null;
+            })
+            .addCase(fetchSkillDetails.fulfilled, (state, action) => {
+                state.loading = false;
+                state.selectedSkill = action.payload;
+            })
+            .addCase(fetchSkillDetails.rejected, (state, action) => {
                 state.loading = false;
                 state.error = action.error.message;
             });

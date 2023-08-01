@@ -1,7 +1,9 @@
+import DisplayRules from "../components/Rules/DisplayRules"
+
 export default function Rules() {
     return (
         <div>
-            Rules stuff to go here
+            <DisplayRules />
         </div>
     )
 }
