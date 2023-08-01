@@ -1,8 +1,6 @@
-// src/store/thunks/fetchAlignmentsData.js
-
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-export const fetchGameData = createAsyncThunk(
+export const fetchAdventuringData = createAsyncThunk(
   "gamedata/fetchData",
   async (api) => {
     const response = await fetch(api);
