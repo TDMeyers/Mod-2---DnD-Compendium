@@ -8,14 +8,14 @@ import DisplayTraits from "../components/Character Data/DisplayTraits";
 
 export default function CharacterData() {
   return (
-    <div>
-      <DisplayAbilityScores />
-      <DisplayAlignments />
-      <DisplayBackgrounds />
-      <DisplayLanguages />
-      <DisplayProficiencies />
-      <DisplaySkills />
-      <DisplayTraits />
-    </div>
+      <div>
+        <DisplayAbilityScores />
+        <DisplayAlignments />
+        <DisplayBackgrounds />
+        <DisplayLanguages />
+        <DisplayProficiencies />
+        <DisplaySkills />
+        <DisplayTraits />
+      </div>
   );
 }

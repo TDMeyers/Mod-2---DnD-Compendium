@@ -11,53 +11,57 @@ import Races from "./Pages/Races";
 import Rules from "./Pages/Rules";
 import Spells from "./Pages/Spells";
 import FeatsAndFeatures from "./Pages/FeatsAndFeatures"
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+
 
 export default function App() {
   return (
     <div>
       <Navbar />
-      <Routes>
-        <Route
-          path="/"
-          element={<Homepage />}
-        />
-        <Route
-          path="/CharacterData"
-          element={<CharacterData />}
-        />
-        <Route
-          path="/Class"
-          element={<Class />}
-        />
-        <Route
-          path="/Equipment"
-          element={<Equipment />}
-        />
-        <Route
-          path="/FeatsAndFeatures"
-          element={<FeatsAndFeatures />}
+        <Routes>
+          <Route
+            path="/"
+            element={<Homepage />}
           />
-        <Route
-          path="/GameMechanics"
-          element={<GameMechanics />}
-        />
-        <Route
-          path="/Monsters"
-          element={<Monsters />}
-        />
-        <Route
-          path="/Races"
-          element={<Races />}
-        />
-        <Route
-          path="/Rules"
-          element={<Rules />}
-        />
-        <Route
-          path="/Spells"
-          element={<Spells />}
-        />
-      </Routes>
+          <Route
+            path="/CharacterData"
+            element={<CharacterData />}
+          />
+          <Route
+            path="/Class"
+            element={<Class />}
+          />
+          <Route
+            path="/Equipment"
+            element={<Equipment />}
+          />
+          <Route
+            path="/FeatsAndFeatures"
+            element={<FeatsAndFeatures />}
+          />
+          <Route
+            path="/GameMechanics"
+            element={<GameMechanics />}
+          />
+          <Route
+            path="/Monsters"
+            element={<Monsters />}
+          />
+          <Route
+            path="/Races"
+            element={<Races />}
+          />
+          <Route
+            path="/Rules"
+            element={<Rules />}
+          />
+          <Route
+            path="/Spells"
+            element={<Spells />}
+          />
+        </Routes>
+      
     </div>
   );
 }
