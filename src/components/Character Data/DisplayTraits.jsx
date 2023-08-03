@@ -7,7 +7,7 @@ const DisplayTraits = () => {
     const { data, selectedTrait, loading, error } = useSelector((state) => state.traits);
 
     useEffect(() => {
-        dispatch(fetchTraitsData());
+        dispatch(fetchTraitsData("/api/traits/"));
     }, [dispatch]);
 
     const handleFetchTraitData = (traitIndex) => {
