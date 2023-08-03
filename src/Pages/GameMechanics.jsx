@@ -1,7 +1,9 @@
+import DisplayConditions from "../components/Game Mechanics/DisplayConditions";
+
 export default function GameMechanics() {
     return (
         <div>
-            Game Stuff to go here
+            <DisplayConditions />
         </div>
     )
 }
