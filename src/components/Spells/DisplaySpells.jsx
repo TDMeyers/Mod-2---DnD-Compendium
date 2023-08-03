@@ -12,7 +12,7 @@ const DisplaySpells = () => {
     );
 
     useEffect(() => {
-        dispatch(fetchSpellsData());
+        dispatch(fetchSpellsData('/api/rules'));
     }, [dispatch]);
 
     const handleFetchWithSpell = (spellIndex) => {

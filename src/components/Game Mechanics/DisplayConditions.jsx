@@ -9,7 +9,7 @@ const DisplayConditions = () => {
     );
 
     useEffect(() => {
-        dispatch(fetchConditionsData());
+        dispatch(fetchConditionsData("/api/conditions"));
     }, [dispatch]);
 
     const handleFetchWithCondition = (conditionIndex) => {

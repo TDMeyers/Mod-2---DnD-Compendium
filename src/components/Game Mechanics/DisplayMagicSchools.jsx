@@ -9,7 +9,7 @@ const DisplayMagicSchools = () => {
     );
 
     useEffect(() => {
-        dispatch(fetchMagicSchoolsData());
+        dispatch(fetchMagicSchoolsData("/api/magic-schools"));
     }, [dispatch]);
 
     const handleFetchWithMagicSchool = (magicSchoolIndex) => {

@@ -12,7 +12,7 @@ const DisplayFeatures = () => {
     );
 
     useEffect(() => {
-        dispatch(fetchFeaturesData("/api/features/"));
+        dispatch(fetchFeaturesData("/api/features"));
     }, [dispatch]);
 
     const handleFetchWithFeature = (featureIndex) => {

@@ -7,7 +7,7 @@ const DisplayRules = () => {
     const { selectedRule, selectedRuleSection, loading, error } = useSelector((state) => state.rules);
 
     useEffect(() => {
-        dispatch(fetchRuleData('/api/rules'));
+        dispatch(fetchRuleData("/api/rules/"));
     }, [dispatch]);
 
     const handleFetchWithRuleSection = (sectionIndex) => {

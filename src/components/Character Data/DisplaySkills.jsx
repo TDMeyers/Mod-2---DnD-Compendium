@@ -7,7 +7,7 @@ const DisplaySkills = () => {
     const { data, selectedSkill, loading, error } = useSelector((state) => state.skills);
 
     useEffect(() => {
-        dispatch(fetchSkillsData());
+        dispatch(fetchSkillsData("/api/skills"));
     }, [dispatch]);
 
     const handleFetchSkillDetails = (skillIndex) => {

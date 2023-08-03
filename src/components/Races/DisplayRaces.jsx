@@ -14,7 +14,7 @@ const DisplayRaces = () => {
     );
 
     useEffect(() => {
-        dispatch(fetchRacesData());
+        dispatch(fetchRacesData("/api/races/"));
     }, [dispatch]);
 
     const handleFetchWithRace = (raceUrl) => {

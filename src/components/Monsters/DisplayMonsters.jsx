@@ -12,7 +12,7 @@ const DisplayMonsters = () => {
     );
 
     useEffect(() => {
-        dispatch(fetchMonstersData("/api/Monsters"));
+        dispatch(fetchMonstersData("/api/monsters"));
     }, [dispatch]);
 
     const handleFetchWithMonster = (monsterIndex) => {

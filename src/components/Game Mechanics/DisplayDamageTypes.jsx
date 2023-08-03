@@ -10,7 +10,7 @@ const DisplayDamageTypes = () => {
     );
 
     useEffect(() => {
-        dispatch(fetchDamageTypesData());
+        dispatch(fetchDamageTypesData("/api/damage-types"));
     }, [dispatch]);
 
     const handleFetchWithDamageType = (damageTypeIndex) => {
