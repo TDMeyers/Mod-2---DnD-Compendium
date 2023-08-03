@@ -10,6 +10,7 @@ import Monsters from "./Pages/Monsters";
 import Races from "./Pages/Races";
 import Rules from "./Pages/Rules";
 import Spells from "./Pages/Spells";
+import FeatsAndFeatures from "./Pages/FeatsAndFeatures"
 
 
 export default function App() {
@@ -33,6 +34,10 @@ export default function App() {
           path="/Equipment"
           element={<Equipment />}
         />
+        <Route
+          path="/FeatsAndFeatures"
+          element={<FeatsAndFeatures />}
+          />
         <Route
           path="/GameMechanics"
           element={<GameMechanics />}

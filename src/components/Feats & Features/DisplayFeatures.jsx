@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
     fetchFeaturesData,
     fetchFeatureData,
-} from "../../Thunks/FeatsAndFeatures/fetchFeaturesData";
+} from "../../Store/Thunks/FeatsAndFeatures/fetchFeaturesData";
 
 const DisplayFeatures = () => {
     const dispatch = useDispatch();
