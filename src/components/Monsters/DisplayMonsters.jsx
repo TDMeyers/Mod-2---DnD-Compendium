@@ -40,10 +40,11 @@ const DisplayMonsters = () => {
                         <p>No data available</p>
                     )}
 
-                    {selectedmonster && (
+                    {selectedMonster && (
                         <>
-                            <h2>{selectedmonster.name}</h2>
+                            <h3>{selectedMonster.name}</h3>
                             <p>Abbreviation: {selectedMonster.abbreviation}</p>
+                            <p>Type: {selectedMonster.type}</p>
                             <p>Description: {selectedMonster.description}</p>
                         </>
                     )}

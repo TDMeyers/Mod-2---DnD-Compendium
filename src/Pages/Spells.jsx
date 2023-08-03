@@ -1,7 +1,10 @@
+import DisplaySpells from "../components/Spells/DisplaySpells";
+
+
 export default function Spells() {
-    return(
+    return (
         <div>
-            Spell stuff to go here
+            <DisplaySpells />
         </div>
     )
 }
