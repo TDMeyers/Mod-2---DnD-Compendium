@@ -8,7 +8,7 @@ import {
 const DisplayMonsters = () => {
     const dispatch = useDispatch();
     const { data, selectedMonster, loading, error } = useSelector(
-        (state) => state.Monsters
+        (state) => state.monsters
     );
 
     useEffect(() => {

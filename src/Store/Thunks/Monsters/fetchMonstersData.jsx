@@ -6,7 +6,7 @@ export const fetchMonstersData = createAsyncThunk(
         const api = "https://www.dnd5eapi.co/api/monsters";
         const response = await fetch(api);
         const data = await response.json();
-        return data;
+        return data.results;
     }
 );
 

@@ -6,7 +6,7 @@ export const fetchEquipmentData = createAsyncThunk(
         const api = `https://www.dnd5eapi.co${equipmentUrl}`;
         const response = await fetch(api);
         const data = await response.json();
-        return data;
+        return data.results;
     }
 );
 
