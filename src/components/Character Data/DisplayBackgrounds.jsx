@@ -51,12 +51,6 @@ const DisplayBackgrounds = () => {
                                     {item.name}
                                 </li>
                             ))}</p>
-                            <p>Languages: {selectedBackgrounds.language_options.map((item) => {
-                                <li key={item.index}>
-                                    
-                                </li>
-                            }
-                            ) } </p>
                         </>
                     )}
                 </>
