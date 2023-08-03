@@ -3,6 +3,7 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAbilityScoresData, fetchAbilityScoresDetails } from "../../Store/Thunks/Character Data/fetchAbilityScoresData";
 import { setShowPopup, setPopupContent, setHoveredSkill } from "../../Store/Slices/Site Functions/popupSlice";
+import Button from '@mui/material/Button';
 import "../../Styles/popup.css"
 
 const DisplayAbilityScores = () => {
@@ -62,6 +63,7 @@ const DisplayAbilityScores = () => {
                     {data && data.length > 0 ? (
                         data.map((abilityScore) => (
                             <button
+                                variant="contained"
                                 key={abilityScore.index}
                                 onClick={() => handleFetchWithAbilityScores(abilityScore.url)}
                             >

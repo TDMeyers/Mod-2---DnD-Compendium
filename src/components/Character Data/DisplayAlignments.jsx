@@ -4,6 +4,8 @@ import {
   fetchAlignmentsData,
   fetchAlignmentDetails,
 } from "../../Store/Thunks/Character Data/fetchAlignmentsData";
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 
 const DisplayAlignments = () => {
   const dispatch = useDispatch();
@@ -29,12 +31,17 @@ const DisplayAlignments = () => {
         <>
           {data && data.length > 0 ? (
             data.map((alignment) => (
-              <button
+              <Stack spacing={5} direction="row">
+              <Button
+                color="primary"
+                size="small"
+                variant="elevated"
                 key={alignment.index}
                 onClick={() => handleFetchWithAlignment(alignment.url)}
               >
                 {alignment.name}
-              </button>
+              </Button>
+              </Stack>
             ))
           ) : (
             <p>No data available</p>

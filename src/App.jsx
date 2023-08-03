@@ -12,7 +12,6 @@ import Rules from "./Pages/Rules";
 import Spells from "./Pages/Spells";
 import FeatsAndFeatures from "./Pages/FeatsAndFeatures"
 
-
 export default function App() {
   return (
     <div>
