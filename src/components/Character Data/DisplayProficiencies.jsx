@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProficienciesData } from "../../Thunks/Character Data/fetchProficienciesData";
+import { fetchProficienciesData } from "../../Store/Thunks/Character Data/fetchProficienciesData";
 
 const DisplayProficiencies = () => {
     const dispatch = useDispatch();

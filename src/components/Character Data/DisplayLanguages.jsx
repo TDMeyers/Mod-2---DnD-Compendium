@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchLanguagesData } from "../../Thunks/Character Data/fetchLanguagesData";
+import { fetchLanguagesData } from "../../Store/Thunks/Character Data/fetchLanguagesData";
 
 const DisplayLanguages = () => {
     const dispatch = useDispatch();

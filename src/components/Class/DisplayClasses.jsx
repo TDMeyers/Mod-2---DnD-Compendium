@@ -4,7 +4,7 @@ import {
     fetchClassesData,
     fetchClassSpellcasting,
     fetchClassMultiClassing,
-} from "../../Thunks/Class/fetchClassesData";
+} from "../../Store/Thunks/Class/fetchClassesData";
 
 const DisplayClasses = () => {
     const dispatch = useDispatch();

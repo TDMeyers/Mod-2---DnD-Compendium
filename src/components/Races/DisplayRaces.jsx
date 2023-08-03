@@ -5,7 +5,7 @@ import {
     fetchRaceSubracesData,
     fetchRaceProficienciesData,
     fetchRaceTraitsData,
-} from "../../Thunks/Races/fetchRacesData";
+} from "../../Store/Thunks/Races/fetchRacesData";
 
 const DisplayRaces = () => {
     const dispatch = useDispatch();

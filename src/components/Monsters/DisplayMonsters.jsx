@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
     fetchMonstersData,
     fetchMonsterData,
-} from "../../Store/Thunks/Character Data/fetchMonstersData";
+} from "../../Store/Thunks/Monsters/fetchMonstersData";
 
 const DisplayMonsters = () => {
     const dispatch = useDispatch();

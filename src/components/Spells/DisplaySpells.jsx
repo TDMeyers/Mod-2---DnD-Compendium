@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
     fetchSpellsData,
     fetchSpellData,
-} from "../../Thunks/Spells/fetchSpellsData";
+} from "../../Store/Thunks/Spells/fetchSpellsData";
 
 const DisplaySpells = () => {
     const dispatch = useDispatch();

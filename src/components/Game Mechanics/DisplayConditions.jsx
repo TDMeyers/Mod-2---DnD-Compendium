@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchConditionsData, fetchConditionData } from "../../Thunks/Game Mechanics/fetchConditionsData";
+import { fetchConditionsData, fetchConditionData } from "../../Store/Thunks/Game Mechanics/fetchConditionsData";
 
 const DisplayConditions = () => {
     const dispatch = useDispatch();

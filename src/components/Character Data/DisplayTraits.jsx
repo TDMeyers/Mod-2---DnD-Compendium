@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchTraitsData, fetchTraitData } from "../../Thunks/Character Data/fetchTraitsData";
+import { fetchTraitsData, fetchTraitData } from "../../Store/Thunks/Character Data/fetchTraitsData";
 
 const DisplayTraits = () => {
     const dispatch = useDispatch();

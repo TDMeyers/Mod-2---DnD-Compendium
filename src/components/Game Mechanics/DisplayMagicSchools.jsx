@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchMagicSchoolsData, fetchMagicSchoolData } from "../../Thunks/Game Mechanics/fetchMagicSchoolsData";
+import { fetchMagicSchoolsData, fetchMagicSchoolData } from "../../Store/Thunks/Game Mechanics/fetchMagicSchoolsData";
 
 const DisplayMagicSchools = () => {
     const dispatch = useDispatch();

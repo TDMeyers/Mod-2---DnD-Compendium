@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchSkillsData, fetchSkillDetails } from "../../Thunks/Character Data/fetchSkillsData";
+import { fetchSkillsData, fetchSkillDetails } from "../../Store/Thunks/Character Data/fetchSkillsData";
 
 const DisplaySkills = () => {
     const dispatch = useDispatch();

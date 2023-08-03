@@ -5,8 +5,8 @@ import {
     fetchEquipmentCategoriesData,
     fetchMagicItemsData,
     fetchWeaponPropertiesData,
-} from "../../Thunks/Equipment/fetchEquipmentData";
-import equipmentSlice from "../../Store/equipmentSlice"; // Assuming you export the equipmentSlice from a separate file.
+} from "../../Store/Thunks/Equipment/fetchEquipmentData";
+
 
 const DisplayEquipment = () => {
     const dispatch = useDispatch();
