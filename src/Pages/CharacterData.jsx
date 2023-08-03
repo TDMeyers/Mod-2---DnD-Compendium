@@ -3,6 +3,7 @@ import DisplayAlignments from "../components/Character Data/DisplayAlignments";
 import DisplayBackgrounds from "../components/Character Data/DisplayBackgrounds";
 import DisplayLanguages from "../components/Character Data/DisplayLanguages";
 import DisplayProficiencies from "../components/Character Data/DisplayProficiencies";
+import DisplaySkills from "../components/Character Data/DisplaySkills";
 
 export default function CharacterData() {
   return (
@@ -12,6 +13,7 @@ export default function CharacterData() {
       <DisplayBackgrounds />
       <DisplayLanguages />
       <DisplayProficiencies />
+      <DisplaySkills />
     </div>
   );
 }

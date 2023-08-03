@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchLanguagesData } from "../../Thunks/Character Data/fetchLanguagesData";
-import languagesSlice from "../../Store/languagesSlice"; // Assuming you export the languagesSlice from a separate file.
 
 const DisplayLanguages = () => {
     const dispatch = useDispatch();

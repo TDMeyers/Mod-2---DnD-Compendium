@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProficienciesData } from "../../Thunks/Character Data/fetchProficienciesData";
-import proficienciesSlice from "../../Store/proficienciesSlice"; // Assuming you export the proficienciesSlice from a separate file.
 
 const DisplayProficiencies = () => {
     const dispatch = useDispatch();
