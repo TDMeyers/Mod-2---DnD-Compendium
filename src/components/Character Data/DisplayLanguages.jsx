@@ -1,14 +1,18 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchLanguagesData } from "../../Store/Thunks/Character Data/fetchLanguagesData";
+import { fetchLanguagesData, fetchLanguageDetails } from "../../Store/Thunks/Character Data/fetchLanguagesData";
 
 const DisplayLanguages = () => {
     const dispatch = useDispatch();
-    const { data, loading, error } = useSelector((state) => state.languages);
+    const { data, selectedLanguage, loading, error } = useSelector((state) => state.languages);
 
     useEffect(() => {
         dispatch(fetchLanguagesData("/api/languages"));
     }, [dispatch]);
+
+    const handleFetchLanguageDetails = (languageURL) => {
+        dispatch(fetchLanguageDetails(languageURL));
+    }
 
     return (
         <div>
@@ -20,14 +24,21 @@ const DisplayLanguages = () => {
                 <>
                     {data && data.length > 0 ? (
                         data.map((language) => (
-                            <div key={language.index}>
-                                <h3>{language.name}</h3>
-                                <p>Typical Speakers: {language.typical_speakers}</p>
-                                <p>Script: {language.script}</p>
-                            </div>
+                            <button key={language.index}
+                                onClick={() => handleFetchLanguageDetails(language.url)}
+                            >
+                                {language.name}
+                            </button>
                         ))
                     ) : (
                         <p>No data available</p>
+                    )}
+
+                    {selectedLanguage && (
+                        <>
+                            <h3>{selectedLanguage.type}</h3>
+                            <p>{selectedLanguage.script}</p>
+                        </>
                     )}
                 </>
             )}

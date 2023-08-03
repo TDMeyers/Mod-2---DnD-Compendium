@@ -1,10 +1,9 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-// Define the async thunk with an additional 'alignment' parameter
 export const fetchAlignmentsData = createAsyncThunk(
   "alignments/fetchData",
   async (alignments) => {
-    const api = `https://www.dnd5eapi.co${alignments}`; // Modify the API URL to include the 'alignment' parameter
+    const api = `https://www.dnd5eapi.co${alignments}`; 
     const response = await fetch(api);
     const data = await response.json();
     return data.results;

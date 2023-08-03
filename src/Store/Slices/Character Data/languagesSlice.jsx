@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchLanguagesData } from "../../Thunks/Character Data/fetchLanguagesData";
+import { fetchLanguagesData, fetchLanguageDetails } from "../../Thunks/Character Data/fetchLanguagesData";
 
 const languagesSlice = createSlice({
     name: "languages",
@@ -20,6 +20,18 @@ const languagesSlice = createSlice({
                 state.data = action.payload;
             })
             .addCase(fetchLanguagesData.rejected, (state, action) => {
+                state.loading = false;
+                state.error = action.error.message;
+            })
+            .addCase(fetchLanguageDetails.pending, (state) => {
+                state.loading = true;
+                state.error = null;
+            })
+            .addCase(fetchLanguageDetails.fulfilled, (state, action) => {
+                state.loading = false;
+                state.data = action.payload;
+            })
+            .addCase(fetchLanguageDetails.rejected, (state, action) => {
                 state.loading = false;
                 state.error = action.error.message;
             });
