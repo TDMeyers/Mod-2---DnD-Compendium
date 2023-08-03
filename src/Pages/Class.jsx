@@ -1,7 +1,9 @@
+import DisplayClasses from "../components/Class/DisplayClasses";
+
 export default function Class() {
     return (
         <div>
-            Class stuff to go here
+            <DisplayClasses />
         </div>
     )
 }
