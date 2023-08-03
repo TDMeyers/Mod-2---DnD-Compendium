@@ -6,6 +6,6 @@ export const fetchProficienciesData = createAsyncThunk(
         const api = `https://www.dnd5eapi.co${proficienciesUrl}`;
         const response = await fetch(api);
         const data = await response.json();
-        return data;
+        return data.results;
     }
 );
