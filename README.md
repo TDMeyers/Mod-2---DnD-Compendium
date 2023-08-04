@@ -23,7 +23,7 @@ Utilized React for passing functionality and state, will be further expanded to 
 
 --------------------------- Screenshots? ------------------------
 
-Find one linked here, maybe: 
+Find one linked here, maybe: ![Imgur image](https://imgur.com/a/g4WjnmW.jpg)
 
 
 --------------------------- Tech / Framework --------------------
