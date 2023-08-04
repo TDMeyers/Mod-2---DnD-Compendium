@@ -9,11 +9,12 @@ I really enjoy TTRPG's, especially D&D and Pathfinder. Given that there are a fe
 
 --------------------------- Build Status -------------------------
 
-Minimum viable product for submission for class.  
+Added more Material UI styling. Still working on fleshing out full design concept and fixing layered api calls. 
 
 ----------------------- Current Bugs/Challenges -------------------
 
 API changes address format frequently as you dig through the data. Does not return much information with single call, expanding call functionality with each click into sub-category. API fetch occasionally fails and triggers blank page that cannot be resolved except for page reload. 
+Netlify hosting will not display image on homepage despite localhost importing and linking image correctly. 
 
 ---------------------------- Code Style --------------------------
 
@@ -22,7 +23,7 @@ Utilized React for passing functionality and state, will be further expanded to 
 
 --------------------------- Screenshots? ------------------------
 
-Find one linked here, maybe: 
+Find one linked here, maybe: ![Image](https://imgur.com/a/g4WjnmW.png)
 
 
 --------------------------- Tech / Framework --------------------
