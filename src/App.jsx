@@ -1,6 +1,5 @@
-// components/App.js
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import NavBar from "./components/NavBar";
 import Homepage from "./Pages/Homepage";
 import CharacterData from "./Pages/CharacterData";
 import Class from "./Pages/Class";
@@ -15,7 +14,7 @@ import FeatsAndFeatures from "./Pages/FeatsAndFeatures"
 export default function App() {
   return (
     <div>
-      <Navbar />
+      <NavBar />
         <Routes>
           <Route
             path="/"

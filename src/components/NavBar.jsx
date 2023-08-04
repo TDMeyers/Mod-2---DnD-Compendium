@@ -69,7 +69,7 @@ const pages = [
 
 const settings = ['Profile', 'Grimoire', 'Bestiary', 'Logout'];
 
-function Navbar() {
+function NavBar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -215,4 +215,4 @@ function Navbar() {
     );
 }
 
-export default Navbar;
+export default NavBar;
