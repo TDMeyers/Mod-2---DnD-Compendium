@@ -1,6 +1,6 @@
 // components/App.js
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/NavBar";
+import Navbar from "./components/Navbar";
 import Homepage from "./Pages/Homepage";
 import CharacterData from "./Pages/CharacterData";
 import Class from "./Pages/Class";
@@ -11,9 +11,6 @@ import Races from "./Pages/Races";
 import Rules from "./Pages/Rules";
 import Spells from "./Pages/Spells";
 import FeatsAndFeatures from "./Pages/FeatsAndFeatures"
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-
 
 export default function App() {
   return (

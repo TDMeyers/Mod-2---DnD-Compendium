@@ -18,6 +18,17 @@ const darkTheme = createTheme({
   palette: {
     mode: 'dark',
   },
+  typography: {
+    subtitle1: {
+      fontSize: 12,
+    },
+    body1: {
+      fontWeight: 500,
+    },
+    button: {
+      fontStyle: 'italic',
+    },
+  },
   components: {
     MuiCssBaseline: {
       styleOverrides: (themeParam) => ({
@@ -31,13 +42,13 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      
-        <Router>
-          <Provider store={store}>
-            <App />
-          </Provider>
-        </Router>
-      
+
+      <Router>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </Router>
+
     </ThemeProvider>
   </React.StrictMode>
 );
